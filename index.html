@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Desafio For</title>
 </head>
+
 <body>
     <input placeholder="Digite o nome do contato">
     <p></p>
@@ -23,19 +25,21 @@
         { name: 'Maria', number: '(14) 94343-3476' },
     ]
 
-    function search(){
-        for (let i = 0; i < contacts.length; i++) {
-            
-        if (input.value.toLowerCase() === contacts[i].name.toLowerCase()) {
-            p.innerHTML = `Contato Encontrado: <br> Nome: ${contacts[i].name} <br> Tel: ${contacts[i].number}`
-            
-            break
-        }else{
-            p.innerHTML = 'Contato não encontrado, tente novamente.'
-        }
-            
+    function search() {
+        let i = 0;
+        while (i < contacts.length) {
+            i++;
+            if (input.value.toLowerCase() === contacts[i].name.toLowerCase()) {
+                p.innerHTML = `Contato Encontrado: <br> Nome: ${contacts[i].name} <br> Tel: ${contacts[i].number}`
+
+                break
+            } else {
+                p.innerHTML = 'Contato não encontrado, tente novamente.'
+            }
+
         }
     }
 
 </script>
+
 </html>
